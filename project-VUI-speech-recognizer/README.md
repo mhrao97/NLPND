@@ -18,7 +18,7 @@ The rubric contains optional "Stand Out Suggestions" for enhancing the project b
 
 In this notebook, you will build a deep neural network that functions as part of an end-to-end automatic speech recognition (ASR) pipeline!  Your completed pipeline will accept raw audio as input and return a predicted transcription of the spoken language.  The full pipeline is summarized in the figure below.
 
-<img src="images/pipeline.png">
+<img src="Images/pipeline.png">
 
 - **STEP 1** is a pre-processing step that converts raw audio to one of two feature representations that are commonly used for ASR. 
 - **STEP 2** is an acoustic model which accepts audio features as input and returns a probability distribution over all potential transcriptions.  After learning about the basic types of neural networks that are often used for acoustic modeling, you will engage in your own investigations, to design your own acoustic model!
@@ -93,13 +93,13 @@ For your convenience, we have designed the notebook so that each model can be sp
 
 Given their effectiveness in modeling sequential data, the first acoustic model you will use is an RNN.  As shown in the figure below, the RNN we supply to you will take the time sequence of audio features as input.
 
-<img src="images/simple_rnn.png">
+<img src="Images/simple_rnn.png">
 
 At each time step, the speaker pronounces one of 28 possible characters, including each of the 26 letters in the English alphabet, along with a space character (" "), and an apostrophe (').
 
 The output of the RNN at each time step is a vector of probabilities with 29 entries, where the $i$-th entry encodes the probability that the $i$-th character is spoken in the time sequence.  (The extra 29th character is an empty "character" used to pad training examples within batches containing uneven lengths.)  If you would like to peek under the hood at how characters are mapped to indices in the probability vector, look at the `char_map.py` file in the repository.  The figure below shows an equivalent, rolled depiction of the RNN that shows the output layer in greater detail. 
 
-<img src="images/simple_rnn_unrolled.png">
+<img src="Images/simple_rnn_unrolled.png">
 
   
 
